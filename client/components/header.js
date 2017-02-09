@@ -1,11 +1,16 @@
 import React from 'react';
 import Account from './account';
+import { Link, browserHistory } from 'react-router';
 
 class Header extends React.Component {
 
     buttonClickHandler(event) {
         event.preventDefault();
-        Meteor.call('bins.insert');
+
+        //Insert bin and redirect
+        Meteor.call('bins.insert', (error, bin_id) => {
+            browserHistory.push(`/bin/${bin_id}`);
+        });
     }
 
 
@@ -13,7 +18,7 @@ class Header extends React.Component {
         return(
             <nav className="nav navbar-default">
                 <div className="navbar-header">
-                    <a className="navbar-brand">Markbin</a>
+                    <Link to="/" className="navbar-brand">Markbin</Link>
                 </div>
                 <ul className="nav navbar-nav">
                     <li>
