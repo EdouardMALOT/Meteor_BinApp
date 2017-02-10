@@ -9,3 +9,20 @@
     height: 55px;
     margin: 10px;
 }
+
+.bin-share {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.bin-share .input-group {
+    width: 30%;
+}
+
+.bin-share > div {
+    margin: 0 10px;
+}

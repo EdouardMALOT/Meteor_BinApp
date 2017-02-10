@@ -21,7 +21,7 @@ class BinEditor extends React.Component {
     render() {
         return(
             <div className="col-xs-8">
-                <h5>Input</h5>
+                <h5>Input : Markdown</h5>
                 <CodeMirror 
                     value = {this.UpdateValue()}
                     onChange={this.onTextChange.bind(this)}
