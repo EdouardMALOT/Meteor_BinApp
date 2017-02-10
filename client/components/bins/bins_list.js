@@ -41,6 +41,8 @@ class BinList extends React.Component {
 
 export default createContainer( () => {
     Meteor.subscribe('bins');
+    Meteor.subscribe('sharebins');
+    
     return { bins: Bins.find({}).fetch()};
 }
 ,BinList);

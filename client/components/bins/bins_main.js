@@ -26,6 +26,7 @@ class BinMain extends React.Component {
 
 export default createContainer( (props) => {
     Meteor.subscribe('bins');
+    Meteor.subscribe('sharebins');
 
     const {bin_id} = props.params;
     return { bins: Bins.findOne(bin_id)};
